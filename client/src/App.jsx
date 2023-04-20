@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./App.css";
+import Table from "./pages/Table";
 
 function App() {
   return (
     <div>
-      <h1 className=" h-[500px] flex justify-center items-center text-6xl">
-        Welcome to our page
-      </h1>
+      <Table />
     </div>
   );
 }
