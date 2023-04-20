@@ -175,7 +175,6 @@ exports.postPending = async (req, res) => {
   }
 };
 
-// exports.postPending = async (req, res) => {
 //   const { Type, Qty, Price } = req.body;
 //   try {
 //     //this condition checks the price qty if someone added the data as a Seller
