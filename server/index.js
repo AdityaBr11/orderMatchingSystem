@@ -2,10 +2,15 @@ const express=require("express");
 const { connection } = require("./config/db");
 const { completeRoute } = require("./routes/complete.route");
 const { pendingRoute } = require("./routes/pending.route");
+const cors=require("cors")
+const env=require("dotenv")
 
 
 const app=express();
+env.config()
 app.use(express.json());
+
+app.use(cors())
 
 
 app.get("/",(req,res)=>{
