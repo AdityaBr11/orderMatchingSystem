@@ -1,5 +1,4 @@
 const express = require("express");
-const { PendingModel } = require("../models/pending.model");
 const { getAllPending, postPending, deletePending, clear } = require("../controller/pendingController");
 
 const pendingRoute = express.Router();
