@@ -10,6 +10,8 @@ import {
   POST_PENDING_SUCC,
 } from "./actionType";
 
+
+
 export const OrderReducer = (state = { completedOrder: [],pendingOrder:[] }, action) => {
   switch (action.type) {
     case GET_PENDING_REQ:
@@ -26,7 +28,7 @@ export const OrderReducer = (state = { completedOrder: [],pendingOrder:[] }, act
     case GET_PENDING_FAIL:
       return {
         ...state,
-        msg: action.payload,
+        err: action.payload,
       };
 
     case POST_PENDING_REQ:
@@ -38,12 +40,13 @@ export const OrderReducer = (state = { completedOrder: [],pendingOrder:[] }, act
       return {
         ...state,
         postloading: false,
-        msg: action.payload,
+        postmsg: action.payload,
+        success:true
       };
     case POST_PENDING_FAIL:
       return {
         ...state,
-        msg: action.payload,
+        error: action.payload,
       };
 
     case GET_COMPLETED_REQ:
@@ -60,7 +63,7 @@ export const OrderReducer = (state = { completedOrder: [],pendingOrder:[] }, act
     case GET_COMPLETED_FAIL:
       return {
         ...state,
-        msg: action.payload,
+        err: action.payload,
       };
     default:
       return state;

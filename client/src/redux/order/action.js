@@ -5,7 +5,7 @@ export const getPending=()=>async (dispatch)=>{
     try {
         dispatch({type:GET_PENDING_REQ});
 
-        const {data}=await axios.get("http://localhost:8080/pending");
+        const {data}=await axios.get("https://puce-scorpion-wear.cyclic.app/pending");
         console.log(data,"pending dataaa")
         dispatch({type:GET_PENDING_SUCC,payload:data.Item})
     } catch (error) {
@@ -17,7 +17,7 @@ export const getCompleted=()=>async (dispatch)=>{
     try {
         dispatch({type:GET_COMPLETED_REQ});
 
-        const {data}=await axios.get("http://localhost:8080/complete");
+        const {data}=await axios.get("https://puce-scorpion-wear.cyclic.app/complete");
         console.log(data,"completed dataaa")
         dispatch({type:GET_COMPLETED_SUCC,payload:data.Item})
     } catch (error) {
@@ -25,11 +25,11 @@ export const getCompleted=()=>async (dispatch)=>{
     }
 }
   
-export const postPending=(data)=>async (dispatch)=>{
+export const postPending=(DATA)=>async (dispatch)=>{
     try {
         dispatch({type:POST_PENDING_REQ});
 
-        const {data}=await axios.post("http://localhost:8080/pending/add",data);
+        const {data}=await axios.post("https://puce-scorpion-wear.cyclic.app/pending/add",DATA);
         dispatch({type:POST_PENDING_SUCC,payload:data.msg})
     } catch (error) {
         dispatch({type:POST_PENDING_FAIL,payload:error.response.data.msg})

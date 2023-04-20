@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily:{
+      joseph:['Josefin Sans'],
+      bad:['Bad Script'],
+      Roboto:['Roboto'],
+    }
   },
   plugins: [require("daisyui")],
 }
