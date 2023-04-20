@@ -91,6 +91,7 @@ const Table = () => {
         className="modal cursor-pointer backdrop-filter backdrop-blur-sm"
       >
         <label className="modal-box relative bg-gray-800" htmlFor="">
+        <label htmlFor="newInput" className="btn btn-sm bg-transparent outline-none border-none absolute right-2 top-2">✕</label>
           <div className="w-full py-3">
             <p className="text-center mb-2 text-xl">Add New Input</p>
             <form
